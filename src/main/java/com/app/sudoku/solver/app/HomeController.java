@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping("/")
 public class HomeController {
 
 
@@ -21,7 +20,7 @@ public class HomeController {
         this.sudokuSolver = sudokuSolver;
     }
 
-    @GetMapping()
+    @GetMapping("/")
     public String home(ModelMap modelMap){
 
         SudokuBoard sudokuBoard = new SudokuBoard();
@@ -32,7 +31,7 @@ public class HomeController {
         return "home";
     }
 
-    @PostMapping()
+    @PostMapping("/")
     public String solve(@ModelAttribute("sudokuBoard") SudokuBoard sudokuBoard, ModelMap modelMap){
 
         int[][] board = sudokuBoard.getRowsAndColumns();

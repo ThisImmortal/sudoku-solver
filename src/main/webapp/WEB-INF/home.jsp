@@ -120,7 +120,7 @@
     </tbody>
 </table>
 
-    <a href="/">
+    <a>
         <button type="submit" class="btn btn-primary btn-lg" style="margin-left: 15px;">
             Solve
         </button>
